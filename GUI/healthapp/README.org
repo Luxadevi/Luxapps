@@ -1,0 +1,119 @@
+Documentation regarding a health app we are going to build
+
+* Health app Preposition:
+
+Let's talk about ideas and goals for this app, contextualize the end goal and how the user
+experience should be designed.
+
+I would like to incorperate multiple techniques previously practiced and learned for other projects.
+
+
+** Main goal:
+
+I want to make something that can help me live a more healthy lifestyle, with long programming or passive
+sessions you will raise chance on some heath issues.
+
+So our first main goal is to build something that can improve blood circulation and movement of the body.
+Help the user to notify on how long they have worked, and what exercises they should do.
+
+
+** Scope of the project:
+
+The scope is not that well defined yet, i would like to incorperate frameworks and ideas i have developed
+with other projects, and explore how to integrate these with a finished product.
+I also want to test new ideas, new frameworks and optimize my coding workflow so code can be worked on
+by myself and also by others.
+
+How much Ai should we incorperate and where to build a database or where to outsource something to a LLM.
+
+** GTD and Pomodoro
+
+It could be interesting to integrate a Pomodoro-Timer and workflow within our Healthapp.
+SO the exercises and activiteis would be somewhat in sync with these techniques. 
+
+** New tools to test and try:
+
+*** Novu and notifications:
+I want to try out Novu; who offers a notification framework that can use multiple output sources, and
+probably will integrate well with a combination of windows and linux.
+
+[[https://github.com/novuhq/novu][Novu Github]]
+
+One of the things i also want to explore is to find out what a more native like notification strategy would
+look like, with QT for example, and what parts are actually needed to have external notifications.
+Compare, what other options are there, and assess what fits best in a python workflow.
+
+*** UV:
+Let`s from the start of this project add UV for management of virtual envs and dependencies.
+
+[[https://github.com/astral-sh/uv][UV Gitub page]]
+
+This will allow us to define the env somewhere that can be easily managed over multiple installations.
+This will include some toml files, and making suggestions for code formatting.
+
+[[https://docs.astral.sh/uv/][UV documentation]]
+
+* About the app:
+
+The app will notify the user that they need to move, but we also need to adhere and think of solutions to
+a couple of issues i have already defined or thought of beforehand.
+
+*** TODO What is the best way to track user activity
+
+We need to think of non intrusive ways of tracking if the pc or devicce is in use,
+Can we detect if the pc is used by someone or if it's in standby.
+
+Some things to think about:
+
+- Non-Intrusive
+  So one of the things we should consider are not getting information that can conflict with other
+  procceses or other application's currently in use by the user.
+  Something that came to mind is anti-cheat tools that are used by games that could trigger a false positive.
+
+- Interval:
+  Important to think about the interval and cpu overhead for our app, we want to use as least resources as possible.
+  
+
+One idea i have had is to check if the user has spawned new processes last couple minutes, if so
+we can determine the pc is in use. In my opinion this is just a first step to a multi layerd solution.
+
+You could also deploy a way to get info about the mouse posistion but as mentioned above,
+this idea will need to be tested and researched since there are complications with doing it this way.
+This includes gaming and edgecases like terminal/keyboard users.
+
+Maybe we can also check what the active window is currently, if we notice a change we determined the computer
+is in use, also has edgecases again where users use one window for a prolonged time.
+
+
+  
+*** TODO QT Configuration:
+
+Let's build or define a small window that will contain options for the user to set,
+for example this could contain configuration about interval, intensity and other user preferences.
+
+Would we define it with a template we can use with other projects?
+Can we write documentation on how to use the template and how to add incremental changes?
+
+
+*** TODO Expand Secrets and security:
+
+So we want do use LLM's to generate exercises and things the user need to do to improve health.
+Do we let them connect to a backend themselves with a API key, or can we also provide middleware and
+be the piece that connects to a backend.
+
+So for example if you want to use Groq you will need the necessary credentials or permissions
+to actualy make the request.
+
+Lets go from the case where the user makes the connection themselves to a backend, this would
+mean we need to either encrypt or challenge the api in a secure way.
+
+The key cannot be appearant in the codebase this is against our license agreement with groq
+and also is against our own security policy.
+
+How do we challenge for a encryption key or how do we make the API key non reversible?
+Try to answer these questions and set a baseline of understanding for future projects.
+What is best practice and when do we just add some middleware where we can let a client just challenge
+for a temporary decryption key.
+
+
+
