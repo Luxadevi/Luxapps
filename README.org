@@ -1,3 +1,25 @@
 #+TITLE: LUXAPPS
-HELlo
+** UV INSTALLING
+
+UV installing guide:
+
+What is UV;
+
+UV is a package you can use to manage virtual enviroments, dependencies and build tools for python  projects.
+They use the newer pep standards where we can fil in the "pyproject.toml" file.
+
+#+begin_src ps1
+  powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+#+end_src
+
+
+[[https://docs.astral.sh/uv/getting-started/first-steps/][UV INTRO]]
+
+
+
+Mounted works right now wiiith reading the script through STDIN as well, this is because we specified the dependencies on top of the document,
+
+These are only dependencies that are external.
+
+
 
