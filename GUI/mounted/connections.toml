@@ -1,0 +1,9 @@
+[[connections]]
+host = "IPHERE"
+user = "username1"
+remote_dir = "FILESYSTEMTOMOUNT"
+
+[[connections]]
+host = "10.16.1.10"
+user = "root"
+remote_dir = "/root/"
