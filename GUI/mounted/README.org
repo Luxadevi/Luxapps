@@ -13,5 +13,6 @@ and dont hassle with command line arguments.
 This app is designed to be ran in an instant and tries to bake the dependencies within
 
 
-
-<img src="ui.png" alt="" align="middle" title="image title" class="img" />
+#+CAPTION: UI of mounted 
+#+NAME:   fig:SED-HR4049
+[[./ui.png]]
