@@ -16,3 +16,15 @@ This app is designed to be ran in an instant and tries to bake the dependencies 
 #+CAPTION: UI of mounted 
 #+NAME:   fig:SED-HR4049
 [[./ui.png]]
+
+** Running it:
+
+Use the command:
+
+#+begin_src 
+  
+  uv run main.py
+  
+#+end_src
+
+This will use the connections.toml file as a config file.
